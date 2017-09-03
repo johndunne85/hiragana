@@ -1,13 +1,9 @@
  <?php
  require_once('initalize.php');
-
- //isset($_POST['login']) ? $_POST['login'] : 't';
-
  ?>
 
 
 <?php
-
 
 if (isset($_GET['var_PHP_data'])) {
   $score =  $_GET['var_PHP_data'];
