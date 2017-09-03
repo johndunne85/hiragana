@@ -1,9 +1,10 @@
  <?php
  require_once('initalize.php');
+
  ?>
 
-
 <?php
+
 
 if (isset($_GET['var_PHP_data'])) {
   $score =  $_GET['var_PHP_data'];
@@ -233,7 +234,7 @@ if(is_post_request() && (isset($_POST['login']) || isset($_POST['playTrue']))){
 
  </head>
 
-<?php if( isset($_GET['var_PHP_data']) || isset($_POST['login'])){ }else{?>
+<?php if( isset($_GET['var_PHP_data']) || isset($_POST['login']) || isset($_POST['signin'])){ }else{?>
  <body>
 
 
@@ -518,7 +519,7 @@ if(! isset($_GET['var_PHP_data']) && !isset($_POST['login'])){
         <p id="result2"></p>
         <p id="result1"></p>
 
-    <?php } ?>
+<?php } ?>
 
 
 
@@ -554,6 +555,7 @@ if(! isset($_GET['var_PHP_data']) && !isset($_POST['login'])){
     <p>
         <label for="password" class="rdr">Password</label>
         <input type="text" name="password" id="password">
+
         <?php  $a="a"; $e="e";$i="i";$o="o";$u="u";$ka="ka";$ke='ke';$ki="ki";$ko="ko";$ku="ku";
         $sa="sa";$se="se";$si="si";$so="so";$su="su";$ta="ta";$te="te";$ti="ti";$to="to";$tu="tu";
         $na="na";$ne="ne";$ni="ni";$no="no";$nu="nu";$ha="ha";$he="he";$hi="hi";$ho="ho";$hu="hu";
@@ -609,7 +611,7 @@ if(! isset($_GET['var_PHP_data']) && !isset($_POST['login'])){
 
     </p>
 
-    <input type="submit"  id="send" name="signin" value="submit">
+    <input type="button"  id="send" name="signin" value="submit">
 
 </form>
 </div>
@@ -618,7 +620,7 @@ if(! isset($_GET['var_PHP_data']) && !isset($_POST['login'])){
 
 
 <div class="form-style-8" id="loginform" hidden>
-    <?php echo display_errors($errors); ?>
+
 <h2 id="title2">Login Form</h2>
 
 <form name="test" id="resultsform" method="POST" action="index.php">
@@ -845,7 +847,7 @@ $ma="ma";$me="me";$mi="mi";$mo='mo';$mu="mu";$ya="ya";$yo="yo";$yu="yu";$ra="ra"
 
 
 
-    <?php if( isset($_GET['var_PHP_data']) || isset($_POST['login'])){}else{?>
+    <?php if( isset($_GET['var_PHP_data']) || isset($_POST['login'])|| isset($_POST['signin'])){}else{?>
         <form name="logout" id="logout" method="post" action="index.php">
         <input type="submit" id="logout" name="logout" value="log out">
         </form>
